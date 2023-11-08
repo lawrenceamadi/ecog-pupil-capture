@@ -1,0 +1,29 @@
+Create & Merge 'Dev' Branch
+---------------------------
+
+see stackoverflow.com/questions/4470523/create-a-branch-in-git-from-another-branch
+
+# after forking pupil-labs source code 
+# create a ttlab-dev branch off pupil-lab's develop branch
+git checkout -b ttlab-dev develop
+
+# after making and testing changes 
+# make final commit on ttlab-dev branch
+git commit -am "Final dev change"
+
+# now merge changes to develop branch
+git checkout develop
+git merge --no-ff ttlab-dev
+
+# now push changes to the server
+git push origin develop
+git push origin ttlab-dev
+
+
+-------------------------
+How To Check Git Branches
+-------------------------
+git branch -l   >>   see local branches
+git branch -r   >>   see remote branches
+git branch -a   >>   see all local and remote branches
+
